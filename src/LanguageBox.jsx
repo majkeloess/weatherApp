@@ -9,18 +9,16 @@ export default function LanguageBox(props){
 
       return(
             <div>
-                  <h2 className="text-2xl text-center m-10">Choose your language: </h2>
+                  <h2 className="text-2xl text-center m-10">{props.lang == 'en' ? 'Choose your language:': 'Wybierz swój język: ' }</h2>
                   <div className="flex gap-10 items-center justify-center">
                         <button onClick={() => {
                               setLanguage('en');
                               setStatus('input');
-                              console.log(language, status);
                               }
                               }><UnitedStates /></button>
                         <button onClick={() => {
                               setLanguage('pl');
                               setStatus('input');
-                              console.log(language, status);
                               }}><Poland /></button>
                   </div>
             </div>
