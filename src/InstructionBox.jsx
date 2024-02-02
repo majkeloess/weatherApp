@@ -3,7 +3,7 @@ import Arrows from "./weatherType/Arrows";
 
 export default function InstructionBox(props){
       return (
-            <div>
+            <div className="xs:hidden">
                   {props.lang == 'en' ?
                   <>
                         <p className="mt-20 mb-2 text-center text-2xl font-medium">You can use your keyboard!</p>

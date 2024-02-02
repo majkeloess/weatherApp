@@ -44,11 +44,11 @@ export default function SearchBox(props) {
       return(
             <div className="flex justify-center flex-row m-10">
                   <form name="weatherSearch" className='flex flex-col items-start justify-center' onSubmit={handleSubmit}>
-                        <label htmlFor="city-input" className="text-xl">{props.lang == 'en' ? 'Enter City:' : 'Wprowadź Miasto:'}</label>
-                        <input autoFocus id="city-input" className="bg-white/50 rounded-xl shadow-xl text-2xl py-1 mt-2 px-14" type="text" value={city} onChange={e => setCity(e.target.value)} />
-                        <p className="mt-4">{error}</p>
-                        <div className="flex flex-row gap-8 m-10">
-                              <button className="text-xl px-10 font-normal bg-blue-100 hover:bg-blue-200 hover:text-black text-black rounded-xl  shadow-xl" type="submit">{props.lang == 'en' ? 'Check the weather': 'Sprawdź pogodę'}</button>
+                        <label htmlFor="city-input" className="text-xl xs:text-lg">{props.lang == 'en' ? 'Enter City:' : 'Wprowadź Miasto:'}</label>
+                        <input autoFocus id="city-input" className="bg-white/50 rounded-xl shadow-xl text-2xl xs:text-lg py-1 mt-2 px-14 xs:px-12" type="text" value={city} onChange={e => setCity(e.target.value)} />
+                        <p className="mt-4 xs:mt-2 ">{error}</p>
+                        <div className="flex flex-row gap-8 m-12">
+                              <button className="text-xl xs:text-lg px-10 xs:px-2 font-normal bg-blue-100 hover:bg-blue-200 hover:text-black text-black rounded-xl  shadow-xl" type="submit">{props.lang == 'en' ? 'Check the weather': 'Sprawdź pogodę'}</button>
                               <button  onClick={() => setStatus('choose')}><Back /></button>
                         </div>
                   </form>

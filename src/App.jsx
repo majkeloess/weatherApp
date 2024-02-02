@@ -15,8 +15,8 @@ export default function App() {
 
       return (
             <NewContext.Provider value={{weatherData, setWeatherData,  language, setLanguage, status, setStatus}}>
-                  <div className="bg-gradient-to-br from-blue-100 via-blue-300 to-blue-500 bg-auto h-screen w-screen flex flex-col align-middle items-center">
-                  <img className='w-[500px] mt-10' src="/public/logo.png" alt="" />
+                  <div className="bg-gradient-to-br from-blue-100 via-blue-300 to-blue-500 bg-auto h-screen w-screen flex flex-col align-middle items-center xs:overflow-hidden">
+                  <img className='w-[500px] xs:w-[350px] mt-10' src="/public/logo.png" alt="" />
 
                         {status == 'choose' && <LanguageBox lang={language} />}
                         {status == 'input' && <SearchBox lang={language} />}

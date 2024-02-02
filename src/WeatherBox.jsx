@@ -56,16 +56,16 @@ export default function WeatherBox(props) {
 
       return(
             <div className="flex flex-col justify-center items-center">
-                  <h1 className="m-2 text-3xl font-medium">{weatherData.city}, {weatherData.country}</h1>
-                  <ul className="flex flex-row items-center gap-6 m-4">
+                  <h1 className="m-2 xs:m-0 text-3xl font-medium">{weatherData.city}, {weatherData.country}</h1>
+                  <ul className="flex flex-row items-center gap-6 xs:m-2 m-4">
                         <li>{image}</li>
-                        <li className="text-7xl font-medium">{weatherData.temp}°C</li>
+                        <li className="text-7xl xs:text-5xl font-medium">{weatherData.temp}°C</li>
                   </ul>
-                  <p className="text-4xl mb-8">{weatherData.description}</p>
-                  <ul className="flex flex-row gap-10 m-4">
-                        <li className="flex flex-col align-middle justify-center items-center gap-3"><Pressure /><p className="text-2xl font-medium">{weatherData.pressure} hPa</p></li>
-                        <li className="flex flex-col align-middle justify-center items-center gap-3"><Wind /><p className="text-2xl font-medium">{weatherData.wind} m/s</p> </li>
-                        <li className="flex flex-col align-middle justify-center items-center gap-3" ><Humidity /><p className="text-2xl font-medium">{weatherData.humidity} %</p></li>
+                  <p className="text-4xl xs:mb-4 mb-8">{weatherData.description}</p>
+                  <ul className="flex flex-row gap-10 m-4 xs:m-2">
+                        <li className="flex flex-col align-middle justify-center items-center gap-3"><Pressure /><p className="text-2xl xs:text-xl font-medium">{weatherData.pressure} hPa</p></li>
+                        <li className="flex flex-col align-middle justify-center items-center gap-3"><Wind /><p className="text-2xl xs:text-xl font-medium">{weatherData.wind} m/s</p> </li>
+                        <li className="flex flex-col align-middle justify-center items-center gap-3" ><Humidity /><p className="text-2xl xs:text-xl font-medium">{weatherData.humidity} %</p></li>
                   </ul>
                   <button className="fx-5 mt-10 py-2 px-5 font-normal bg-blue-100 hover:bg-blue-200 hover:text-black text-black rounded-xl text-lg shadow-xl" onClick={() => setStatus('input')}>{props.lang == 'en' ? 'Check weather for other city!':'Sprawdź pogodę dla innego miasta!'}</button>
             </div>
