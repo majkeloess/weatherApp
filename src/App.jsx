@@ -4,6 +4,7 @@ import SearchBox from "./SearchBox";
 import WeatherBox from "./WeatherBox";
 import LanguageBox from "./LanguageBox";
 import NewContext from "./NewContext";
+import InstructionBox from "./InstructionBox";
 
 export default function App() {
       
@@ -19,8 +20,8 @@ export default function App() {
                               {status == 'input' && <SearchBox lang={language} />}
                               {status == 'data' && <WeatherBox lang={language}/>}
                         
+                              {(status == 'choose' || status == 'input' )&& <InstructionBox lang={language} />}
                         <Footer />
-                        <p className="m-40 text-center">You can use only your keyboard!</p>
                   </div>
             </NewContext.Provider>
       );

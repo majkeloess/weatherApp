@@ -1,11 +1,32 @@
 import UnitedStates from "./weatherType/UnitedStates";
 import Poland from "./weatherType/Poland";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import NewContext from "./NewContext";
 
 export default function LanguageBox(props){
 
       const {language, setLanguage, status, setStatus} = useContext(NewContext);
+
+      useEffect(() => {
+                  function handleKeyDown(event){
+                        if (event.key === 'ArrowRight') {
+                              setLanguage('pl');
+                              setStatus('input');
+                        }
+                        else if(event.key === 'ArrowLeft') {
+                              setLanguage('en');
+                              setStatus('input');
+                        }
+                };
+    
+            window.addEventListener('keydown', handleKeyDown);
+    
+            return () => {
+                window.removeEventListener('keydown', handleKeyDown);
+            };
+        }, []);
+
+
 
       return(
             <div>

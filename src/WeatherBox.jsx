@@ -41,7 +41,7 @@ export default function WeatherBox(props) {
 
       useEffect(() => {
             function handleKeyDown(event){
-                if (event.key === 'Backspace') {
+                if (event.key === 'Escape') {
                     setStatus('input');
                 }
             };
