@@ -48,7 +48,7 @@ export default function SearchBox(props) {
                         <input autoFocus id="city-input" className="bg-white/50 rounded-xl shadow-xl text-2xl py-1 mt-2 px-14" type="text" value={city} onChange={e => setCity(e.target.value)} />
                         <p className="mt-4">{error}</p>
                         <div className="flex flex-row gap-8 m-10">
-                              <button className="text-xl px-10 font-normal bg-blue-100 hover:bg-blue-200 hover:text-black text-black rounded-xl  shadow-xl" type="submit">{props.lang == 'en' ? 'Check the weather!': 'Sprawdź pogodę!'}</button>
+                              <button className="text-xl px-10 font-normal bg-blue-100 hover:bg-blue-200 hover:text-black text-black rounded-xl  shadow-xl" type="submit">{props.lang == 'en' ? 'Check the weather': 'Sprawdź pogodę'}</button>
                               <button  onClick={() => setStatus('choose')}><Back /></button>
                         </div>
                   </form>

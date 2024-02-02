@@ -5,6 +5,7 @@ import WeatherBox from "./WeatherBox";
 import LanguageBox from "./LanguageBox";
 import NewContext from "./NewContext";
 import InstructionBox from "./InstructionBox";
+import Logo from "./weatherType/Logo";
 
 export default function App() {
       
@@ -14,14 +15,15 @@ export default function App() {
 
       return (
             <NewContext.Provider value={{weatherData, setWeatherData,  language, setLanguage, status, setStatus}}>
-                  <div className="bg-gradient-to-br from-blue-100 via-blue-300 to-blue-500 bg-auto h-screen w-screen flex flex-col align-middle">
-                        <h1 className="flex justify-center text-7xl font-medium p-10">weatherApp</h1>
-                              {status == 'choose' && <LanguageBox lang={language} />}
-                              {status == 'input' && <SearchBox lang={language} />}
-                              {status == 'data' && <WeatherBox lang={language}/>}
+                  <div className="bg-gradient-to-br from-blue-100 via-blue-300 to-blue-500 bg-auto h-screen w-screen flex flex-col align-middle items-center">
+                  <img className='w-[500px] mt-10' src="/public/logo.png" alt="" />
+
+                        {status == 'choose' && <LanguageBox lang={language} />}
+                        {status == 'input' && <SearchBox lang={language} />}
+                        {status == 'data' && <WeatherBox lang={language}/>}
                         
-                              {(status == 'choose' || status == 'input' )&& <InstructionBox lang={language} />}
-                        <Footer />
+                        {(status == 'choose' || status == 'input' )&& <InstructionBox lang={language} />}
+                        <Footer lang={language} />
                   </div>
             </NewContext.Provider>
       );
