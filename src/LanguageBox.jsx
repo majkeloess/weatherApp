@@ -2,7 +2,7 @@ import UnitedStates from "./weatherType/UnitedStates";
 import Poland from "./weatherType/Poland";
 import { useContext, useEffect } from "react";
 import NewContext from "./NewContext";
-
+import { motion } from "framer-motion";
 export default function LanguageBox(props){
 
       const {language, setLanguage, status, setStatus} = useContext(NewContext);
@@ -29,19 +29,30 @@ export default function LanguageBox(props){
 
 
       return(
-            <div>
+            <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ ease: "easeOut", duration: 1 }}
+            >
                   <h2 className="text-3xl xs:text-2xl text-center m-10 font-medium">{props.lang == 'en' ? 'Choose your language:': 'Wybierz swój język: ' }</h2>
                   <div className="flex gap-10 xs:gap-7 items-center justify-center">
-                        <button onClick={() => {
+                        <motion.button
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => {
                               setLanguage('en');
                               setStatus('input');
                               }
-                              }><UnitedStates /></button>
-                        <button onClick={() => {
+                              }><UnitedStates /></motion.button>
+                        <motion.button 
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => {
                               setLanguage('pl');
                               setStatus('input');
-                              }}><Poland /></button>
+                              }}><Poland /></motion.button>
                   </div>
-            </div>
+            </motion.div>
           );
 }
