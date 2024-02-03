@@ -25,7 +25,7 @@ export default function App() {
     >
       <div className="bg-gradient-to-br from-blue-100 via-blue-300 to-blue-500 bg-auto h-screen w-screen flex flex-col align-middle items-center xs:overflow-hidden">
         <img
-          className="w-[500px] xs:w-[350px] mt-10"
+          className="w-[500px] xs:w-[350px] mt-10 xs:mt-1"
           src="https://res.cloudinary.com/dq5exroyd/image/upload/v1706906594/logo_w6v4zt.png"
           alt=""
         />

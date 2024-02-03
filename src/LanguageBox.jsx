@@ -30,6 +30,7 @@ export default function LanguageBox(props) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ ease: "easeOut", duration: 1 }}
+      className="xs:m-8"
     >
       <h2 className="text-3xl xs:text-2xl text-center m-10 font-medium">
         {props.lang == "en" ? "Choose your language:" : "Wybierz swój język: "}

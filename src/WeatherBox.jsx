@@ -69,7 +69,7 @@ export default function WeatherBox(props) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ ease: "ease", duration: 3 }}
-        className="text-4xl xs:mb-4 mb-8"
+        className="text-4xl xs:text-3xl xs:mb-4 mb-8"
       >
         {weatherData.description}
       </motion.p>
