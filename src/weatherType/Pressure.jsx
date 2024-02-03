@@ -5,6 +5,7 @@ export default function Pressure() {
       height="80px"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="xs:h-[50px]"
     >
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
       <g

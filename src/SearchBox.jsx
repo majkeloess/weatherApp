@@ -83,18 +83,22 @@ export default function SearchBox(props) {
         </motion.p>
         <div className="flex flex-row gap-8 justify-center align-middle items-center m-12">
           <motion.button
+            className="fx-5 py-2 px-5 font-normal bg-blue-100 hover:bg-blue-200 hover:text-black text-black rounded-xl text-lg shadow-xl"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             type="submit"
           >
-            <Check />
+            {" "}
+            {props.lang == "en" ? "Check" : "Sprawdź"}
           </motion.button>
           <motion.button
+            className=" py-2 px-5 font-normal bg-blue-100 hover:bg-blue-200 hover:text-black text-black rounded-xl text-lg shadow-xl"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={() => setStatus("choose")}
           >
-            <Back />
+            {" "}
+            {props.lang == "en" ? "Back" : "Wróć"}
           </motion.button>
         </div>
       </form>

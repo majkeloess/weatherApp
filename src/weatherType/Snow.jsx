@@ -8,6 +8,7 @@ export default function Snow() {
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       fill="#000000"
+      className="xs:h-[100px]"
     >
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
       <g

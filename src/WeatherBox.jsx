@@ -60,7 +60,7 @@ export default function WeatherBox(props) {
       </h1>
       <ul className="flex flex-row items-center gap-6 xs:m-2 m-4">
         <li>{image}</li>
-        <li className="text-7xl xs:text-5xl font-medium">
+        <li className="text-7xl min-w-[110px] xs:text-5xl font-medium">
           {weatherData.temp}°C
         </li>
       </ul>
@@ -69,7 +69,7 @@ export default function WeatherBox(props) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ ease: "ease", duration: 3 }}
-        className="text-4xl xs:text-3xl xs:mb-4 mb-8"
+        className="text-4xl xs:text-2xl xs:mb-4 mb-8"
       >
         {weatherData.description}
       </motion.p>
@@ -102,7 +102,7 @@ export default function WeatherBox(props) {
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="fx-5 mt-10 py-2 px-5 font-normal bg-blue-100 hover:bg-blue-200 hover:text-black text-black rounded-xl text-lg shadow-xl"
+        className="mt-5 py-2 px-5 font-normal bg-blue-100 hover:bg-blue-200 hover:text-black text-black rounded-xl text-lg shadow-xl"
         onClick={() => setStatus("input")}
       >
         {props.lang == "en"
