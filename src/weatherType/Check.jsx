@@ -1,9 +1,9 @@
-export default function Arrows() {
+export default function Check() {
   return (
     <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      height="70px"
+      fill="#000000"
+      height="100px"
+      viewBox="0 0 1920 1920"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -15,11 +15,8 @@ export default function Arrows() {
       <g id="SVGRepo_iconCarrier">
         {" "}
         <path
-          d="M3 12H21M3 12L7 8M3 12L7 16M21 12L17 16M21 12L17 8"
-          stroke="#000000"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          d="M1743.858 267.012 710.747 1300.124 176.005 765.382 0 941.387l710.747 710.871 1209.24-1209.116z"
+          fill-rule="evenodd"
         ></path>{" "}
       </g>
     </svg>
