@@ -1,1 +1,3 @@
 # weatherApp
+docs soon......
+https://majkeloess.dev/weatherApp/
